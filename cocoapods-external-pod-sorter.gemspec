@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = CocoapodsExternalPodSorter::VERSION
   spec.authors       = ['tripleCC']
   spec.email         = ['triplec.linux@gmail.com']
-  spec.description   = %q{A short description of cocoapods-external-pod-sorter.}
-  spec.summary       = %q{A longer description of cocoapods-external-pod-sorter.}
-  spec.homepage      = 'https://github.com/EXAMPLE/cocoapods-external-pod-sorter'
+  spec.description   = %q{对 Podfile 中依赖 external 的组件进行分组.}
+  spec.summary       = %q{对 Podfile 中依赖 external 的组件进行分组.}
+  spec.homepage      = 'https://github.com/tripleCC/cocoapods-external-pod-sorter'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files`.split($/)
