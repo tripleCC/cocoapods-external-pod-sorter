@@ -1,6 +1,6 @@
 # cocoapods-external-pod-sorter
 
-A description of cocoapods-external-pod-sorter.
+对 Podfile 中依赖 external 的组件进行分组.
 
 ## Installation
 
@@ -8,4 +8,6 @@ A description of cocoapods-external-pod-sorter.
 
 ## Usage
 
-    $ pod spec sorter POD_NAME
+
+    $ pod sort
+
