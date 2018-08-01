@@ -47,9 +47,12 @@ module Pod
       def run
         config = Pod::Config.instance
         config.installation_root = Pathname.new(@project_directory) if @project_directory
-        sorter = ExternalPodSorter.new(config)
+        data_source = ExternalPodSorter::LocalDataSource.new(config)
+        sorter = ExternalPodSorter.new(data_source)
         sorter.sort
-        sorter.grouped_pods.each do |group|
+
+        if sorter.grouped_pods
+          sorter.grouped_pods.each do |group|
           group.each do |pod|
             display = pod.name.dup
             if pod.external_dependency_names.any?
@@ -61,6 +64,10 @@ module Pod
             puts display
           end
         end
+        else
+          puts '没有未依赖正式版本组件.'
+        end
+        
       end
     end
   end
